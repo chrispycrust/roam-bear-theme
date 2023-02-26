@@ -1,3 +1,12 @@
+Reproducing my favourite themes from Bear Pro for Roam
+
+## Light theme: Solarised Light
+
+![Solarized Light theme screenshot](solarised-light-theme.png "Solarized Light theme in Roam")
+
+## Dark theme: Charcoal
+
+![Charcoal theme screenshot](charcoal-dark-theme.png "Charcoal dark theme in Roam")
 
 ## persisting problems 
 
