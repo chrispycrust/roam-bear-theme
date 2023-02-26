@@ -1,4 +1,4 @@
-Reproducing my favourite themes from Bear Pro for Roam
+# Reproducing my favourite themes from Bear Pro for Roam for a better everyday note-taking experience :)
 
 ## Light theme: Solarised Light
 
@@ -11,9 +11,12 @@ Reproducing my favourite themes from Bear Pro for Roam
 ## persisting problems 
 
 - unable to target textarea when editing page titles to get it consistent, so it's switching between serif display and avenir sans-serif when editing, pretty annoying
-- how to target "unlinked reference" title separately from everything else. it's too bright in dark theme
-- 
+- how to target "unlinked reference" title separately from everything else. it's too bright in dark theme 
 
 ## styling wishlist
 
-- replacing bullet-points with icons from https://tabler-icons.io/
+- replacing bullet-points with icons from https://tabler-icons.io/ like nmartin84: https://github.com/nmartin84/logseq-flow
+
+## up next
+
+- reproducing olive theme from Bear for fresher feel
