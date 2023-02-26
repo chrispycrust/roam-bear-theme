@@ -1,0 +1,348 @@
+
+/* -------------------------------------------------- 
+   ------------------ GLOBALS ------------------ 
+   -------------------------------------------------- */
+
+   :root {
+    --primary: hsl(210 6% 20%); /* grey */
+    --secondary: hsl(216 6% 16%); /* darker gey */
+    --tertiary: hsl(210 7% 22%); /* lighter grey */
+    --accent: hsl(201 50% 70%); /* mint blue */
+    --text: hsl(180 1% 67%);
+    --pale-text: hsl(180 1% 67% / 0.5);
+    --highlight: hsl(201 50% 30%);
+    --blockquote-bg: hsl(210 15% 25%);
+}
+
+
+html {
+    --inline-highlight-color: hsl(210 20% 29%);
+    --highlight-color: red;
+}
+
+body,
+.roam-body .roam-app {
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+.bp3-menu-item,
+.bp3-tooltip .bp3-popover-content, .bp3-tooltop .bp3-heading {
+    color: var(--text);
+}
+
+.bp3-menu,
+.bp3-tooltip .bp3-popover-content {
+    background: var(--secondary);
+}
+
+.bp3-popover .bp3-popover-arrow-fill,
+.bp3-tooltip .bp3-popover-arrow-fill {
+    fill: var(--secondary);
+}
+
+.bp3-input {
+    background: var(--blockquote-bg);
+    color: white;
+}
+
+.rm-pages-toolbar .toolbar-search-group .search-input {
+    background-color: var(--tertiary);
+    border: 1px solid hsl(46 16% 69%);
+}
+
+.rm-pages-toolbar .toolbar-search-group .search-icon {
+    color: hsl(46 26% 58%);
+}
+
+.rm-pages-title-text {
+    color: var(--accent);
+}
+
+#right-sidebar {
+    background-color: var(--primary);
+    border-left: 2px solid var(--secondary);
+}
+
+.rm-block__self .rm-block__ref-count.rm-active {
+    color: var(--text);
+    background-color: var(--secondary);
+}
+
+/* -------------------------------------------------- 
+   ------------------ LEFT SIDEBAR ------------------ 
+   -------------------------------------------------- */
+
+.roam-body .roam-app .roam-sidebar-container {
+    background: var(--secondary);
+    padding: 0 20px;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row {
+    margin-left: -20px;
+    margin-right: -20px;
+    transition: 100ms ease-in;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .title,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    color: hsl(180 1% 55%);
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .rm-db-title, /* account login */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .title,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    font-weight: 400;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon,
+.bp3-icon-star::before {
+    color: hsl(180 1% 55%); 
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
+    transition: 100ms ease-in;
+    margin-bottom: 5px;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    transition: 100ms ease-in;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    font-size: 0.9rem;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover,
+#roam-sidebar-logo:hover {
+    background-color: hsl(210 20% 25%);
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .icon:hover {
+    color: white;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover,
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
+    color: white;
+    border-radius: 10px;
+}
+
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    padding-left: 20px;
+}
+
+
+/* -------------------------------------------------- 
+   ------------------ MAIN BODY STYLING -------------
+   -------------------------------------------------- */
+
+textarea, /* when focussing on a block to type */
+div, /* styling of all texts and blocks */
+.rm-level1, .rm-heading-level-1>.rm-block__self .rm-block__input /* h1 */ {
+    font-family: Avenir, sans-serif;
+}
+
+.rm-level2, .rm-heading-level-2>.rm-block__self .rm-block__input /* h2 */ {
+    font-family: Avenir, sans-serif !important;
+}
+
+strong {
+    color: var(--text);
+}
+
+.rm-level1, .rm-heading-level-1>.rm-block__self .rm-block__input, /* h1 */
+.rm-level2, .rm-heading-level-2>.rm-block__self .rm-block__input, /* h2 */
+.rm-level3, .rm-heading-level-3>.rm-block__self .rm-block__input /* h3 */{
+    color: var(--text);
+    font-weight: 400;
+}
+
+/* journal headings */
+
+.roam-body .roam-app .roam-main .roam-article .rm-title-editing-display textarea .rm-title-text-area,
+.roam-body .roam-app h1 {
+    font-family: Garamond, serif;
+    color: var(--text);
+}
+
+.roam-body .roam-app .roam-main .roam-article .rm-title-display {
+    margin-bottom: 20px;
+}
+
+/* border between log entries */
+.rm-article-wrapper .roam-log-container .roam-log-page { 
+    border-color: hsl(180 1% 67% / 0.2);
+}
+
+/* bullet styling, open and closed */
+.rm-bullet__inner,
+.rm-bullet.rm-bullet--closed .rm-bullet__inner { 
+    background-color: var(--accent);
+}
+
+.rm-multibar { /* left border when bullet is open */
+    border-color: hsl(180 1% 67% / 0.2); 
+}
+
+.rm-bullet.rm-bullet--closed .rm-bullet__inner,
+.sidebar-content .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* closed bullet with nested content */
+    border-color: hsl(180 1% 67% / 0.3);
+}
+
+.rm-page-ref--tag {
+    color: var(--text);
+    background: var(--pale-text);
+    padding: 0 10px;
+    border-radius: 10px;
+    transition: 100ms ease-in; /* for hover styling */
+}
+
+a,
+.rm-page-ref--link { 
+    color: var(--accent);
+}
+
+.rm-block-ref {
+    border-bottom: 1px dashed hsl(180 1% 67% / 0.5);
+}
+
+.rm-block-ref:hover {
+    background: hsl(210 15% 25%);
+}
+
+.rm-reference-item {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rm-inline-references {
+    background-color: var(--secondary);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+
+a:focus, 
+a:hover {
+    color: var(--accent);
+}
+
+/* blockquotes */
+.rm-bq { 
+    background-color: hsl(210 15% 25%);
+    border-left: 1px dashed var(--accent);
+    border-radius: 0 10px 10px 0;
+}
+
+.bp3-slider-progress.bp3-intent-primary {
+    background-color: var(--accent);
+}
+
+/*selecting a text */
+::selection {
+    background: hsl(210 15% 30%);
+}
+
+
+/* -------------------------------------------------- 
+   ---------------- TO BE COMPLETED ----------------- 
+   -------------------------------------------------- */
+
+/*
+
+affects both a links and tags 
+.rm-page-ref:hover { 
+    text-decoration: none;
+}
+
+.rm-all-pages .table .rm-pages-row.rm-pages-row-header {
+    background-color: ;
+    color: ;
+}
+
+to fix alignment of large headings to the bullet point, but actually aligns to baseline ref blocks and center of blockquotes 
+.roam-block-container .rm-block-main { 
+    align-items: baseline;
+}
+
+.flex-h-box {
+    padding-top: 10px;
+}
+
+*/
+
+/* -------------------------------------------------- 
+   ---------------- CUSTOM DATA TAGS ---------------- 
+   -------------------------------------------------- */
+
+span.rm-page-ref[data-tag="Journal"]:before {
+    content: '☁︎ '
+}
+
+span.rm-page-ref[data-tag="Working Log"]:before {
+    content: '𝌝 '
+}
+
+span.rm-page-ref[data-tag="Q:"]:before {
+    content: '❓ '
+}
+
+
+span.rm-page-ref[data-tag="thought"]:before {
+    content: '☁︎ ';
+}
+
+span.rm-page-ref[data-tag="note"]:before {
+    content: '❗️ '
+}
+
+span.rm-page-ref[data-tag="to find out"]:before {
+    content: '🔍  '; 
+}
+
+span.rm-page-ref[data-tag="zettel"]:before {
+    content: '❖ '
+}
+
+span.rm-page-ref[data-tag="literature note"]:before {
+    content: '◇ '
+}
+
+span.rm-page-ref[data-tag="fleeting notes"]:before {
+    content: '○ '
+}
+
+span.rm-page-ref[data-tag="to check out"]:before {
+    content: '⤴ '
+}
+
+span.rm-page-ref[data-tag="lexicon"]:before {
+    content: '⨁ ';
+}
+
+
+span.rm-page-ref[data-tag="agenda"]:before,
+span.rm-page-ref[data-tag="for next time"]:before {
+    content: '⌁ '; /* ARROWS: ➤ ☛ ❥ ↬ ↠ ↣ ↪ ⌱ ⌁ ⇢ ⚡️ */
+}
+
+span.rm-page-ref[data-tag="story ideas"]:before,
+span.rm-page-ref[data-tag="blog ideas"]:before,
+span.rm-page-ref[data-tag="startup ideas"]:before,
+span.rm-page-ref[data-tag="art ideas"]:before {
+    content: '☀︎ ';
+}
+
+span.rm-page-ref[data-tag="grateful"]:before, 
+span.rm-page-ref[data-tag="i like"]:before,
+span.rm-page-ref[data-tag="resonance calendar"]:before {
+    content: '❤︎ ';
+}
