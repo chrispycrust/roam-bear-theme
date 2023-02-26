@@ -2,7 +2,7 @@
    ------------------ GLOBALS ------------------ 
    -------------------------------------------------- */
 
-   :root {
+:root {
     --light-yellow: hsl(44 79% 94%);
     --teal: hsl(198 12% 41%);
     --dark-teal: hsl(196 13% 34%);
@@ -12,7 +12,8 @@
     --desat-yellow-2: hsl(44 25% 85%);
     --warm-yellow: hsl(39 45% 85%);
     --highlight: hsl(45 65% 80%);
-  }
+    --caret: hsl(210 57% 54%); /* aka text cursor */
+}
 
 body,
 .roam-body .roam-app {
@@ -20,7 +21,10 @@ body,
     color: var(--dark-teal);
 }
 
-/* TOOLTIPs and popup menus */
+/* ------------------------
+  |   TOOLTIPS & POPOVERS  |
+   ------------------------ */
+
 
 .bp3-menu-item,
 .bp3-tooltip .bp3-popover-content, .bp3-tooltop .bp3-heading {
@@ -37,10 +41,13 @@ body,
     fill: white;
 }
 
+/* ------------------------
+  |       SEARCH BAR       |
+   ------------------------ */
+
 .bp3-input {
     background: var(--warm-yellow);
 }
-
 .rm-pages-toolbar .toolbar-search-group .search-input {
     background-color: var(--warm-yellow);
     border: 1px solid hsl(46 16% 69%);
@@ -171,6 +178,10 @@ div, /* styling of all texts and blocks */
     border-color: var(--desat-yellow-2);
 }
 
+/* ------------------------
+  |      BULLET STYLES     |
+   ------------------------ */
+
 /* bullet styling, open and closed */
 .rm-bullet__inner,
 .rm-bullet.rm-bullet--closed .rm-bullet__inner { 
@@ -186,8 +197,8 @@ div, /* styling of all texts and blocks */
 }
 
 .rm-page-ref--tag {
-    color: hsl(199 11% 46%);
-    background: hsl(46 30% 87%);
+    color: var(--teal);
+    background: hsl(46 30% 85%);
     padding: 0 10px;
     border-radius: 10px;
     transition: 100ms ease-in;
@@ -239,6 +250,38 @@ a:hover {
     background: var(--highlight);
 }
 
+/* ------------------------
+  |       CODE STYLES      |
+   ------------------------ */
+
+   code {
+    color: var(--text);
+    background-color: var(--desat-yellow-1);
+    border: 1px solid var(--gold-yellow);
+}
+
+.rm-code-block {
+    background-color: var(--desat-yellow-1);
+    border-radius: 10px;
+}
+
+.ͼ2 .cm-gutters {
+    background-color: var(--warm-yellow);
+    color: var(--light-yellow);
+}
+
+.ͼ2 .cm-gutters:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.cm-focused .cm-activeLine {
+    background-color: hsl(39 45% 95%) !important;
+}
+
+.cm-focused .cm-activeLineGutter {
+    background-color: hsl(39 45% 75%) !important;
+}
+
 
 /* -------------------------------------------------- 
    ---------------- TO BE COMPLETED ----------------- 
@@ -271,16 +314,22 @@ unlinked references section but also affects some nav items
    ---------------- CUSTOM DATA TAGS ---------------- 
    -------------------------------------------------- */
 
+span.rm-page-ref[data-tag="Journal"]:before,  
+span.rm-page-ref[data-tag="Working Log"]:before,
+span.rm-page-ref[data-tag="thought"]:before {
+    color: hsl(198 12% 50%);  
+}
+
 span.rm-page-ref[data-tag="Journal"]:before {
-    content: '☁︎ '
+    content: '☁︎ ';
 }
 
 span.rm-page-ref[data-tag="Working Log"]:before {
-    content: '𝌝 '
+    content: '𝌝 ';
 }
 
 span.rm-page-ref[data-tag="Q:"]:before {
-    content: '❓ '
+    content: '❓ ';
 }
 
 

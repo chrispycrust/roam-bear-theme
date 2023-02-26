@@ -3,7 +3,7 @@
    ------------------ GLOBALS ------------------ 
    -------------------------------------------------- */
 
-   :root {
+:root {
     --primary: hsl(210 6% 20%); /* grey */
     --secondary: hsl(216 6% 16%); /* darker gey */
     --tertiary: hsl(210 7% 22%); /* lighter grey */
@@ -14,7 +14,6 @@
     --blockquote-bg: hsl(210 15% 25%);
 }
 
-
 html {
     --inline-highlight-color: hsl(210 20% 29%);
     --highlight-color: red;
@@ -24,7 +23,9 @@ body,
 .roam-body .roam-app {
     background-color: var(--primary);
     color: var(--text);
+    caret-color: var(--accent);
 }
+
 
 .bp3-menu-item,
 .bp3-tooltip .bp3-popover-content, .bp3-tooltop .bp3-heading {
@@ -181,18 +182,24 @@ strong {
     border-color: hsl(180 1% 67% / 0.2);
 }
 
+/* ------------------------
+  |      BULLET STYLES     |
+   ------------------------ */
+
 /* bullet styling, open and closed */
 .rm-bullet__inner,
 .rm-bullet.rm-bullet--closed .rm-bullet__inner { 
     background-color: var(--accent);
 }
 
-.rm-multibar { /* left border when bullet is open */
+/* left border when bullet is open */
+.rm-multibar { 
     border-color: hsl(180 1% 67% / 0.2); 
 }
 
+/* closed bullet with nested content */
 .rm-bullet.rm-bullet--closed .rm-bullet__inner,
-.sidebar-content .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* closed bullet with nested content */
+.sidebar-content .rm-bullet.rm-bullet--closed .rm-bullet__inner { 
     border-color: hsl(180 1% 67% / 0.3);
 }
 
@@ -249,6 +256,38 @@ a:hover {
 /*selecting a text */
 ::selection {
     background: hsl(210 15% 30%);
+}
+
+/* ------------------------
+  |       CODE STYLES      |
+   ------------------------ */
+
+   code {
+    color: var(--text);
+    background-color: var(--blockquote-bg);
+    border: 1px solid hsl(210 15% 35%);
+}
+
+.rm-code-block {
+    background-color: var(--blockquote-bg);
+    border-radius: 10px;
+}
+
+.ͼ2 .cm-gutters {
+    background-color: hsl(210 15% 35%);
+    color: var(--pale-text);
+}
+
+.ͼ2 .cm-gutters:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.cm-focused .cm-activeLine {
+    background-color: hsl(210 15% 15%) !important;
+}
+
+.cm-focused .cm-activeLineGutter {
+    background-color: hsl(210 15% 10%) !important;
 }
 
 
