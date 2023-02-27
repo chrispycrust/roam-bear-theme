@@ -287,36 +287,8 @@ a:hover {
 }
 
 .cm-focused .cm-activeLineGutter {
-    background-color: hsl(210 15% 10%) !important;
+    background-color: hsl(210 15% 25%) !important; 
 }
-
-
-/* -------------------------------------------------- 
-   ---------------- TO BE COMPLETED ----------------- 
-   -------------------------------------------------- */
-
-/*
-
-affects both a links and tags 
-.rm-page-ref:hover { 
-    text-decoration: none;
-}
-
-.rm-all-pages .table .rm-pages-row.rm-pages-row-header {
-    background-color: ;
-    color: ;
-}
-
-to fix alignment of large headings to the bullet point, but actually aligns to baseline ref blocks and center of blockquotes 
-.roam-block-container .rm-block-main { 
-    align-items: baseline;
-}
-
-.flex-h-box {
-    padding-top: 10px;
-}
-
-*/
 
 /* -------------------------------------------------- 
    ---------------- CUSTOM DATA TAGS ---------------- 
