@@ -192,6 +192,10 @@ div, /* styling of all texts and blocks */
     border-color: var(--desat-yellow-2); 
 }
 
+.rm-multibar:hover {
+    border-right: 2px solid var(--gold-yellow);
+}
+
 .rm-bullet.rm-bullet--closed .rm-bullet__inner { /* closed bullet with nested content */
     border-color: var(--desat-yellow-2);
 }
@@ -246,6 +250,7 @@ a:hover {
 }
 
 /*selecting a text */
+.block-highlight-blue,
 ::selection {
     background: var(--highlight);
 }

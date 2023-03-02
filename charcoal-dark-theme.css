@@ -32,6 +32,7 @@ body,
     color: var(--text);
 }
 
+.rm-autocomplete__results,
 .bp3-menu,
 .bp3-tooltip .bp3-popover-content {
     background: var(--secondary);
@@ -254,6 +255,7 @@ a:hover {
 }
 
 /*selecting a text */
+.block-highlight-blue,
 ::selection {
     background: hsl(210 15% 30%);
 }
