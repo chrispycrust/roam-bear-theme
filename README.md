@@ -17,6 +17,7 @@ I slightly modified the original bear colours for charcoal e.g. upping saturatio
 ## to-dos
 
 - ### adjustments to increase readability and ease of use 
+    - number of references on right sidebar needs to be same as general text area, it's too dark in charcoal, it's also black in solarised light which is off theme
     - viewed at 100%, the font is way too small, i have to zoom to 150% manually in browser to get to a more comfortable reading size
     - the colour of the pop up hover on charcoal needs to be adjusted as it can conflict with other sections with similar coloured background e.g. within section of linked refs
     - search bar results: no hover styling, formatted in a way that we're unable to see properly
@@ -44,6 +45,7 @@ I slightly modified the original bear colours for charcoal e.g. upping saturatio
         }
         ```
     - test on different browsers. firefox seems to make the fonts thicker instead of fine, also adds its own scrollbar which doesn't fit the theme
+    - changing hierarchy - it bothers me that reference links are bigger than the title "linked references" or unlinked references
 
 - ### adjustments for theme consistency
     - "All Pages" title - adjust table heading colours
@@ -57,6 +59,7 @@ I slightly modified the original bear colours for charcoal e.g. upping saturatio
     - subtle border change when focussing a search text area
     - there's a more noticeable fade when hovering over each navigation item in left sidebar in logseq
     - disable background change when hovering over roam research - or expand clickable area, looks bad that square chunk, and it doesn't transition properly ... may be coded separately from the others, potentially hard coded into html with "style" property
+    - hovering over a block reference retains a border at the bottom - bit weird
 
 ## extra stuff to add
 
