@@ -2,7 +2,7 @@
    ------------------ GLOBALS ------------------ 
    -------------------------------------------------- */
 
-:root {
+   :root {
     --light-yellow: hsl(44 79% 94%);
     --teal: hsl(198 12% 41%);
     --dark-teal: hsl(196 13% 34%);
@@ -13,63 +13,26 @@
     --warm-yellow: hsl(39 45% 85%);
     --highlight: hsl(45 65% 80%);
     --caret: hsl(210 57% 54%); /* aka text cursor */
+  }
+
+body, html {
+    font-size: 1.1rem;
 }
 
 body,
 .roam-body .roam-app {
     background-color: var(--light-yellow);
     color: var(--dark-teal);
+    caret-color: var(--caret);
 }
 
-/* ------------------------
-  |   TOOLTIPS & POPOVERS  |
-   ------------------------ */
-
-
-.bp3-menu-item,
-.bp3-tooltip .bp3-popover-content, .bp3-tooltop .bp3-heading {
-    color: var(--teal);
+/* width of article body 
+.rm-article-wrapper.rm-spacing--small {
+    padding-left: calc((100% - 1000px) / 2);
+    padding-right: calc((100% - 1000px) / 2);
 }
+*/
 
-.bp3-menu,
-.bp3-tooltip .bp3-popover-content {
-    background: white;
-}
-
-.bp3-popover .bp3-popover-arrow-fill,
-.bp3-tooltip .bp3-popover-arrow-fill {
-    fill: white;
-}
-
-/* ------------------------
-  |       SEARCH BAR       |
-   ------------------------ */
-
-.bp3-input {
-    background: var(--warm-yellow);
-}
-.rm-pages-toolbar .toolbar-search-group .search-input {
-    background-color: var(--warm-yellow);
-    border: 1px solid hsl(46 16% 69%);
-}
-
-.rm-pages-toolbar .toolbar-search-group .search-icon {
-    color: hsl(46 26% 58%);
-}
-
-.rm-pages-title-text {
-    color: var(--gold-yellow);
-}
-
-#right-sidebar {
-    background-color: var(--light-yellow);
-    border-left: 2px solid var(--warm-yellow);
-}
-
-.rm-block__self .rm-block__ref-count.rm-active {
-    color: var(--teal);
-    background-color: var(--desat-yellow-1);
-}
 
 /* -------------------------------------------------- 
    ------------------ LEFT SIDEBAR ------------------ 
@@ -78,6 +41,7 @@ body,
 .roam-body .roam-app .roam-sidebar-container {
     background: var(--teal);
     padding: 0 20px;
+    width: 252px;
 }
 
 .roam-sidebar-container .bp3-button[class*="bp3-icon-"]::before {
@@ -94,7 +58,10 @@ body,
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .title,
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
     color: var(--light-yellow);
+    font-size: inherit;
 }
+
+
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .rm-db-title, /* account login */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button,
@@ -120,7 +87,7 @@ body,
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button,
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover,
@@ -169,6 +136,33 @@ div, /* styling of all texts and blocks */
     color: var(--teal);
 }
 
+.h1, h1 {
+   font-size: 2.5rem;
+}
+
+/* pop up menu when right clicking bullet */
+.bp3-text-small {
+    font-size: inherit;
+}
+
+.rm-page__title {
+    font-size: 1.3rem;
+}
+
+.flex-h-box .rm-title-arrow-wrapper {
+    padding-top: 10px;
+}
+
+.roam-block {
+    line-height: 1.65rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.rm-zoom.zoom-mentions-view {
+    font-size: inherit;
+}
+
 .roam-body .roam-app .roam-main .roam-article .rm-title-display {
     margin-bottom: 20px;
 }
@@ -177,10 +171,6 @@ div, /* styling of all texts and blocks */
 .rm-article-wrapper .roam-log-container .roam-log-page { 
     border-color: var(--desat-yellow-2);
 }
-
-/* ------------------------
-  |      BULLET STYLES     |
-   ------------------------ */
 
 /* bullet styling, open and closed */
 .rm-bullet__inner,
@@ -210,11 +200,13 @@ div, /* styling of all texts and blocks */
 
 
 .rm-block-ref {
-    border-bottom: 1px dashed var(--gold-yellow);
+    border-bottom: 0.5px solid var(--gold-yellow);
+    transition: 100ms ease-in;
 }
 
 .rm-block-ref:hover {
-    background: var(--highlight);
+    background: transparent;
+    color: var(--gold-yellow);
 }
 
 .rm-inline-references {
@@ -226,6 +218,7 @@ div, /* styling of all texts and blocks */
 a,
 .rm-page-ref--link { 
     color: var(--gold-yellow);
+    transition: 100ms ease-in;
 }
 
 .rm-reference-item {
@@ -243,6 +236,7 @@ a:hover {
     background-color: var(--desat-yellow-1);
     border-left: 1px dashed var(--gold-yellow);
     border-radius: 0 10px 10px 0;
+    font-size: inherit;
 }
 
 .bp3-slider-progress.bp3-intent-primary {
@@ -255,11 +249,11 @@ a:hover {
     background: var(--highlight);
 }
 
-/* ------------------------
-  |       CODE STYLES      |
-   ------------------------ */
+/* ------------------------------
+  |       CODE BLOCK STYLES      |
+   ------------------------------ */
 
-   code {
+code {
     color: var(--text);
     background-color: var(--desat-yellow-1);
     border: 1px solid var(--gold-yellow);
@@ -280,40 +274,65 @@ a:hover {
 }
 
 .cm-focused .cm-activeLine {
-    background-color: hsl(39 45% 95%) !important;
+    background-color: var(--light-yellow) !important;
 }
 
 .cm-focused .cm-activeLineGutter {
     background-color: hsl(39 45% 75%) !important;
 }
 
-
-/* -------------------------------------------------- 
-   ---------------- TO BE COMPLETED ----------------- 
-   -------------------------------------------------- */
-
-/*
-
-affects both a links and tags 
-.rm-page-ref:hover { 
-    text-decoration: none;
+/* when opening up references */
+.rm-zoom-path .rm-zoom-item {
+    color: var(--gold-yellow);
 }
 
-.rm-all-pages .table .rm-pages-row.rm-pages-row-header {
-    background-color: ;
-    color: ;
-}
 
-to fix alignment of large headings to the bullet point, but actually aligns to baseline ref blocks and center of blockquotes 
-.roam-block-container .rm-block-main { 
-    align-items: baseline;
-}
+/* -------------------------------------
+  |       TOOLTIPs and popup menuS      |
+   ------------------------------------- */
 
-unlinked references section but also affects some nav items
-.flex-h-box {
-    padding-top: 10px;
-}
-*/
+   .bp3-menu-item,
+   .bp3-tooltip .bp3-popover-content, .bp3-tooltop .bp3-heading {
+       color: var(--teal);
+   }
+   
+   .bp3-menu,
+   .bp3-tooltip .bp3-popover-content {
+       background: white;
+   }
+   
+   .bp3-popover .bp3-popover-arrow-fill,
+   .bp3-tooltip .bp3-popover-arrow-fill {
+       fill: white;
+   }
+   
+   .bp3-input {
+       background: var(--warm-yellow);
+   }
+   
+   .rm-pages-toolbar .toolbar-search-group .search-input {
+       background-color: var(--warm-yellow);
+       border: 1px solid hsl(46 16% 69%);
+   }
+   
+   .rm-pages-toolbar .toolbar-search-group .search-icon {
+       color: hsl(46 26% 58%);
+   }
+   
+   .rm-pages-title-text {
+       color: var(--gold-yellow);
+   }
+   
+   #right-sidebar {
+       background-color: var(--light-yellow);
+       border-left: 2px solid var(--warm-yellow);
+   }
+   
+   .rm-block__self .rm-block__ref-count.rm-active {
+       color: var(--teal);
+       background-color: var(--desat-yellow-1);
+   }
+
 
 /* -------------------------------------------------- 
    ---------------- CUSTOM DATA TAGS ---------------- 
