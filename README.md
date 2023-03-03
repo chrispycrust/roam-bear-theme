@@ -17,8 +17,11 @@ I slightly modified the original bear colours for charcoal e.g. upping saturatio
 ## to-dos
 
 - ### adjustments to increase readability and ease of use 
-    - number of references on right sidebar needs to be same as general text area, it's too dark in charcoal, it's also black in solarised light which is off theme
-    - viewed at 100%, the font is way too small, i have to zoom to 150% manually in browser to get to a more comfortable reading size
+    - "number of references" heading on right sidebar needs to be same as general text area, it's too dark in charcoal, it's also black in solarised light which is off theme
+    - ✅ ~~viewed at 100%, the font is way too small, i have to zoom to 150% manually in browser to get to a more comfortable reading size~~
+        - reset font sizes to 1.1rem, it seems different components of the app use different sizes
+        - now the left sidebar is relatively too skinny compared to the main body of the app
+    - adjusting font-size for 100% has knocked other things askew like the popup menu after right clicking bullet
     - the colour of the pop up hover on charcoal needs to be adjusted as it can conflict with other sections with similar coloured background e.g. within section of linked refs
     - search bar results: no hover styling, formatted in a way that we're unable to see properly
     - heading/page titles: unable to target textarea when editing to get it consistent, so it's switching between serif display and avenir sans-serif when editing, pretty annoying
@@ -50,9 +53,10 @@ I slightly modified the original bear colours for charcoal e.g. upping saturatio
 - ### adjustments for theme consistency
     - "All Pages" title - adjust table heading colours
     - adjust the highlight colour for solarised theme - it's lighter and more desaturated in the actual Bear app #f0e8d0 => hsl(45 52% 88%)
-    - change colour of border when bullet is expanded 
+    - ✅ ~~change colour of border when bullet is expanded~~
     - change colour of checkmark when completed to match theme
-    - highlighting a complete code block (with all nested elemenets if there are any) is different to highlighting within a code block. it's a deep blue. how to target to change??
+    - ✅ ~~highlighting a complete code block (with all nested elemenets if there are any) is different to highlighting within a code block. it's a deep blue. how to target to change??~~
+        - `.block-highlight-blue` targets complete block colour selection
     - bullet border colour in sidebar seems to be different than border in the main app area
 
 - ### other adjustments
