@@ -159,7 +159,17 @@ ul.bp3-menu.rm-find-or-create__menu {
     background: #D5DADF;
 }
 
-/* -------------------------------------------------- 
+/* direct page references
+ul.bp3-menu.rm-find-or-create__menu div.flex-v-box.rm-menu-item {
+    color: #8A9BA8; 
+}
+*/
+
+ul.bp3-menu.rm-find-or-create__menu div.flex-v-box.rm-menu-item li.rm-search-list-item span {
+    color: #8A9BA8; /* default */
+}
+
+/* ------------------------------------------------
 ------------------ ROAM MAIN ARTICLES -------------
 -------------------------------------------------- */
 
@@ -464,9 +474,9 @@ code {
     color: var(--accent);
 }
 
-/* -------------------------------------
+/* ----------------------------
 |       TOOLTIPS & POPUPS      |
-------------------------------------- */
+------------------------------- */
 
 /* three dots */
 
